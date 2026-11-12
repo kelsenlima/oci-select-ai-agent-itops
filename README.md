@@ -79,7 +79,7 @@ Most AI agents in operations sit outside the data: a Python service, an API key 
 **Prerequisites**
 
 - An **Autonomous AI Database 26ai** (Always Free works).
-- A region with **OCI Generative AI** (tested with `us-chicago-1`).
+- A region with **OCI Generative AI** (set it in script 02).
 - Permission to create a Dynamic Group and an IAM policy.
 
 **1. IAM (OCI Console)**
@@ -150,7 +150,7 @@ SELECT perguntar_agente('abra um chamado para o servidor xpto-99 com prioridade 
 | `ORA-00923` on `SELECT AI` | Database Actions does not support `SELECT AI` | Use `DBMS_CLOUD_AI.GENERATE` or `perguntar_agente` |
 | Authorization error from GenAI | Wrong value in `oci_compartment_id` (for example the database OCID) | Script 02 reads it from `v$pdbs.cloud_identity` |
 | `OCI$RESOURCE_PRINCIPAL` missing | Resource principal not enabled | Run script 00 as ADMIN |
-| Model not found | Region without OCI Generative AI | Set `"region": "us-chicago-1"` in the profile |
+| Model not found | Region without OCI Generative AI | Set `"region"` in the profile to a region that offers OCI Generative AI |
 | Agent forgets the approval | No `conversation_id` between calls | Use `perguntar_agente` (stores it in `CONVERSA_LAB`) |
 
 ## Production checklist

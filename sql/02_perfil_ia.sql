@@ -17,7 +17,7 @@ BEGIN
     attributes   => '{"provider":"oci",'
                  || '"credential_name":"OCI$RESOURCE_PRINCIPAL",'
                  || '"oci_compartment_id":"' || v_comp || '",'
-                 || '"region":"us-chicago-1",'
+                 || '"region":"<REGIAO_COM_OCI_GENAI>",'
                  || '"comments":"true",'
                  || '"object_list":['
                  || '{"owner":"' || v_owner || '","name":"SERVIDORES"},'
@@ -26,7 +26,7 @@ BEGIN
   );
 END;
 /
--- region: use uma região com OCI Generative AI (us-chicago-1 funciona).
+-- region: troque <REGIAO_COM_OCI_GENAI> pelo identificador de uma região que tenha OCI Generative AI.
 
 -- Teste rápido do perfil.
 -- No SQLcl ou SQL Developer:

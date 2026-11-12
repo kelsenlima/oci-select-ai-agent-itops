@@ -79,7 +79,7 @@ A maioria dos agentes de IA em operações fica fora dos dados: um serviço em P
 **Pré-requisitos**
 
 - Um **Autonomous AI Database 26ai** (o Always Free serve).
-- Uma região com **OCI Generative AI** (testado em `us-chicago-1`).
+- Uma região com **OCI Generative AI** (defina no script 02).
 - Permissão para criar Dynamic Group e policy.
 
 **1. IAM (console OCI)**
@@ -148,7 +148,7 @@ SELECT perguntar_agente('abra um chamado para o servidor xpto-99 com prioridade 
 | `ORA-00923` no `SELECT AI` | O Database Actions não suporta `SELECT AI` | Use `DBMS_CLOUD_AI.GENERATE` ou `perguntar_agente` |
 | Erro de autorização no GenAI | Valor errado em `oci_compartment_id` (por exemplo o OCID do banco) | O script 02 lê de `v$pdbs.cloud_identity` |
 | Sem `OCI$RESOURCE_PRINCIPAL` | Resource principal não habilitado | Rode o script 00 como ADMIN |
-| Modelo não encontrado | Região sem OCI Generative AI | Use `"region": "us-chicago-1"` no perfil |
+| Modelo não encontrado | Região sem OCI Generative AI | Defina no perfil uma `"region"` que tenha OCI Generative AI |
 | O agente esquece a aprovação | Sem `conversation_id` entre as chamadas | Use `perguntar_agente` (guarda em `CONVERSA_LAB`) |
 
 ## Checklist para produção
