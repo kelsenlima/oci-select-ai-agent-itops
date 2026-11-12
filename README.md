@@ -184,6 +184,8 @@ SELECT perguntar_agente('abra um chamado para o servidor xpto-99 com prioridade 
 **Kelsen Lima** · Head of IT · Oracle ACE Apprentice
 *Governed AI. Measurable Impact.*
 
+Part 2, with an external agent (n8n + Gemini) using the database as an MCP server: [kelsenlima/oci-adb-mcp-n8n](https://github.com/kelsenlima/oci-adb-mcp-n8n)
+
 [Blog](https://planningit.wordpress.com) · [LinkedIn](https://www.linkedin.com/in/kelsenlima) · [Credly](https://www.credly.com/users/kelsen-lima) · [GitHub](https://github.com/kelsenlima)
 
 If this lab helped you, a star on the repo helps other people find it.
